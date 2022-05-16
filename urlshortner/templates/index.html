@@ -89,8 +89,8 @@ section {
 
 <script type="text/javascript">
   $(document).on('submit','#post-form',function(e){
-    e.preventDefault();
-
+    e.preventDefault(); 
+    
     $.ajax({
       type:'POST',
       url:'/create',
@@ -99,7 +99,7 @@ section {
         csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
       },
       success: function(data){
-        $('h2').html("www.surls.ga/"+data)
+        $('h2').html("localhost:8000/"+data)
       }
     });
   });
